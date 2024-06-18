@@ -1,0 +1,191 @@
+/* 
+  Общие стили 
+*/
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #f8f4f0;
+  color: #333;
+  background-image: url('/Users/abdulaziz/Desktop/Erasyl Web Restaurant/images/Bannenr.jpg'); /* Замените на ваш путь */
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-attachment: fixed; /* Фон фиксируется при прокрутке */
+} 
+
+h1, h2, h3 {
+  font-weight: normal;
+  margin: 1.2em 0 0.6em 0; 
+}
+
+h1 {
+  font-size: 2.5em;
+  text-align: center; 
+  display: flex;
+  justify-content: center; /* Центрируем элементы по горизонтали */
+  align-items: center;    /* Центрируем элементы по вертикали */
+  gap: 10px; /* Отступ между названием ресторана и словом "Меню" */
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+/*
+  Меню
+*/
+
+.menu {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.menu-categories {
+  display: flex;
+  flex-direction: column; /* Размещаем категории вертикально */
+  gap: 20px;
+}
+
+.menu-column {
+  width: 50%; 
+}
+
+.menu-category {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-description {
+  text-align: center;
+  margin-bottom: 15px; 
+}
+
+.category-link {
+  display: block; /* Занимаем всю ширину контейнера */
+  font-size: 1.2em;
+  font-weight: 500; /* Средний вес шрифта */
+  text-decoration: none; /* Убираем подчеркивание ссылки */
+  color: inherit; /* Наследуем цвет от родителя */
+  margin-bottom: 10px; 
+  text-align: center;
+}
+
+.category-link:hover {
+  text-decoration: underline; /* Добавляем подчеркивание при наведении */
+}
+
+.dishes-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px; 
+}
+
+.dish {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.dish:last-child { 
+  border-bottom: none;
+}
+
+.dish h3 {
+  margin-bottom: 5px; 
+}
+
+/* 
+  Footer 
+*/
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 20px;
+}
+
+/*
+  Медиа-запросы для адаптивности
+*/
+
+@media (max-width: 960px) {
+  .menu-categories {
+    flex-direction: column; 
+  }
+
+  .menu-column {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* Стили для ссылок на категории */
+.category-links {
+  text-align: center;
+  margin-bottom: 20px; 
+}
+
+.category-links ul {
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0;
+  margin: 0;
+  display: inline-flex; /* Размещаем ссылки в строку */
+  flex-wrap: wrap;     /* Переносим ссылки на новую строку, если не хватает места */
+  gap: 10px;          /* Отступ между ссылками */
+}
+
+.category-links a {
+  font-size: 0.9em; /* Уменьшаем размер шрифта для ссылок */
+  text-decoration: none;
+  color: inherit;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #eee; 
+}
+
+.category-links a:hover {
+  background-color: #ddd;
+}
+
+/* Стили для кнопки "Наверх" */
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10; 
+  opacity: 0.7; /* Небольшая прозрачность */
+  transition: opacity 0.3s;
+}
+
+#back-to-top:hover {
+  opacity: 1;
+}
